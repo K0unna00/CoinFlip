@@ -1,0 +1,10 @@
+$darkBlue:#f0647b;
+$lightBlue:#000;
+$background: #37306B;
+@font-face {
+    font-family: "MyHelvetica";
+    src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+      url('../font/Nice\ Sugar.ttf');
+    font-weight: bold;
+}
+$myFont:'MyHelvetica';

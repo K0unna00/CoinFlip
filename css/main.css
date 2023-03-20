@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "MyHelvetica";
+  src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"), url("../font/Nice Sugar.ttf");
+  font-weight: bold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #37306B;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+
+.container button {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  margin: 40px 30px;
+  font-weight: bold;
+  font-size: 40px;
+  font-family: "MyHelvetica";
+  color: #000;
+  background-color: #f0647b;
+  border: 2px solid #000;
+  cursor: pointer;
+  -webkit-box-shadow: 1px 2px 2px 1px black;
+          box-shadow: 1px 2px 2px 1px black;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.container button:active {
+  -webkit-transform: translate(5px, 5px);
+          transform: translate(5px, 5px);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.container div {
+  width: 30px;
+  height: 350px;
+  border-radius: 8px;
+  background-color: #f0647b;
+  -webkit-transform: skew(165deg);
+          transform: skew(165deg);
+  border: 2px solid #000;
+}
+/*# sourceMappingURL=main.css.map */

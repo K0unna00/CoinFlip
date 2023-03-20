@@ -1,0 +1,157 @@
+@font-face {
+  font-family: "MyHelvetica";
+  src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"), url("../font/Nice Sugar.ttf");
+  font-weight: bold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #37306B;
+  font-family: "MyHelvetica";
+}
+
+.coins {
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.coins .coin {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.coins .heads {
+  background-color: #f0647b;
+  border: 3px solid #000;
+  color: #000;
+}
+
+.coins .tails {
+  border: 3px solid #f0647b;
+  background-color: #000;
+  color: #f0647b;
+  top: 0;
+  display: none;
+}
+
+.score {
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+@-webkit-keyframes flip {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  20% {
+    background-color: #f0647b;
+    color: #000;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  40% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+    color: #f0647b;
+    background-color: #000;
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+  }
+  60% {
+    background-color: #f0647b;
+    color: #000;
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  80% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    background-color: #000;
+    color: #f0647b;
+    -webkit-transform: rotateX(120deg);
+            transform: rotateX(120deg);
+  }
+  100% {
+    background-color: #f0647b;
+    color: #000;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes flip {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  20% {
+    background-color: #f0647b;
+    color: #000;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  40% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+    color: #f0647b;
+    background-color: #000;
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+  }
+  60% {
+    background-color: #f0647b;
+    color: #000;
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  80% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    background-color: #000;
+    color: #f0647b;
+    -webkit-transform: rotateX(120deg);
+            transform: rotateX(120deg);
+  }
+  100% {
+    background-color: #f0647b;
+    color: #000;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+/*# sourceMappingURL=style.css.map */

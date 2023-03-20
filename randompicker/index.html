@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/pick.css">
+</head>
+
+<body>
+    <div class="container">
+        <ul class="items">
+        </ul>
+        <div class="input-section">
+            <input type="text" class="input">
+            <button class="addBtn">Add</button>
+        </div>
+        <button class="pickBtn">PICK</button>
+    </div>
+    <script>
+        const $ = par => {
+            const elements = document.querySelectorAll(par);
+            return elements.length === 1 ? elements[0] : elements;
+        }
+        const random = max => Math.floor(Math.random() * max);
+        const chooseRandom = () => {
+            const { children } = items;
+            new Audio('../audio/picker.wav').play();
+            pickBtn.disabled = true;
+            if (children.length > 1) {
+                let index = 0;
+                let interval = setInterval(() => {
+                    if (index !== children.length) {
+                        for (let i in [...children]) Object.assign(children[i].style, { backgroundColor: '#f0647b', transform: 'none' })
+                        Object.assign(children[index++].style, { backgroundColor: '#8d303f', transform: 'translate(2px, 2px)' })
+                    }
+                    else {
+                        clearInterval(interval);
+                        children[index - 1].style = { backgroundColor: '#f0647b', transform: 'none' }
+                        children[random(children.length)].style.transform = 'matrix(1.35, 0, 0, 1.35, 0, -30)';
+                        pickBtn.disabled = false;
+                    }
+                }, 240);
+            }
+        }
+        const items = $('.items'), input = $('.input'), pickBtn = $('.pickBtn'), addBtn = $('.addBtn');
+        addBtn.addEventListener('click', () => {
+            input.value.trim() !== '' && (
+                items.innerHTML += `<li>${input.value}</li>`,
+                input.value = ''
+            )
+        })
+        pickBtn.addEventListener('click', () => chooseRandom());
+        document.addEventListener('keydown', e => e.key === "Enter" && (
+            input.value.trim() !== '' && (
+                items.innerHTML += `<li>${input.value}</li>`,
+                input.value = ''
+            )
+        ));
+    </script>
+</body>
+</html>

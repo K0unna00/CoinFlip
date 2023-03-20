@@ -1,0 +1,93 @@
+@import './variables';
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: $background;
+}
+
+.container {
+    font-family: $myFont;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+
+    .items {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+        justify-content: center;
+
+        li {
+            height: 20px;
+            background-color: $darkBlue;
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            border-radius: 6px;
+            box-shadow: 1px 2px 2px 1px black;
+            transition: 0.2s;
+            font-size: 18px;
+            margin-bottom: 20px;
+            cursor: pointer;
+
+            &:hover {
+                transform: translate(5px, 5px) !important;
+                box-shadow: 1px 1px 1px 1px black;
+            }
+        }
+    }
+
+    .input-section {
+        input {
+            font-size: 22px;
+            width: 360px;
+            height: 35px;
+            padding: 3px 12px;
+            border-radius: 12px;
+            border: none;
+            outline: none;
+            background-color: #fff;
+            font-family: $myFont;
+
+            &:focus {
+                transform: scale(1.02);
+            }
+        }
+
+        button {
+            margin: 0 12px;
+            width: 120px;
+            padding: 8px 16px;
+            background-color: #f0647b;
+            box-shadow: 1px 2px 2px 1px black;
+            border-radius: 15px;
+            font-size: 18px;
+            font-family: $myFont;
+
+            &:hover {
+                transform: translate(2px, 2px);
+                box-shadow: 1px 1px 1px 1px black;
+            }
+        }
+
+        margin-bottom: 30px;
+    }
+
+    button {
+        width: 150px;
+        padding: 8px 16px;
+        background-color: #f0647b;
+        box-shadow: 1px 2px 2px 1px black;
+        border-radius: 15px;
+        font-size: 18px;
+        font-family: $myFont;
+        &:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 1px 1px 1px 1px black;
+        }
+    }
+}

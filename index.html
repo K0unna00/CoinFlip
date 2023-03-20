@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="container">
+        <button class="coin">Flip Coin</button>
+        <div class="line"></div>
+        <button class="randomWord" >Pick Random Word</button>
+        
+    </div>
+    <script>
+        let coin = document.querySelector('.coin');
+        coin.addEventListener('click' , () => {
+            let sound = new Audio('../audio/flip.wav');
+            sound.play();
+            setTimeout(() => {
+                window.location.href='/coin'
+            },240);
+        })
+        let randomWord = document.querySelector('.randomWord');
+        randomWord.addEventListener('click' , () => {
+            let sound = new Audio('../audio/picker.wav');
+            sound.play();
+            setTimeout(() => {
+                window.location.href='/randompicker'
+            },600)
+        })
+    </script>
+</body>
+</html>
