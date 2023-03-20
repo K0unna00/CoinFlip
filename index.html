@@ -17,7 +17,7 @@
     <script>
         let coin = document.querySelector('.coin');
         coin.addEventListener('click' , () => {
-            let sound = new Audio('../audio/flip.wav');
+            let sound = new Audio('./audio/flip.wav');
             sound.play();
             setTimeout(() => {
                 window.location.href='./coin'
@@ -25,7 +25,7 @@
         })
         let randomWord = document.querySelector('.randomWord');
         randomWord.addEventListener('click' , () => {
-            let sound = new Audio('../audio/picker.wav');
+            let sound = new Audio('./audio/picker.wav');
             sound.play();
             setTimeout(() => {
                 window.location.href='./randompicker'
